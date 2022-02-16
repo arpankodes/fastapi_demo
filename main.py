@@ -2,6 +2,7 @@ from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+
 app= FastAPI()
 
 # a dummy model to recieve a body from PUT request
@@ -9,6 +10,7 @@ class Item(BaseModel):
     name: str
     price: float
     is_offer: Optional[bool] = None # it is optional to be provided
+
 
 
 @app.get("/")
